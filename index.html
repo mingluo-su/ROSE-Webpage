@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <!-- Primary Meta Tags -->
   <meta name="title" content="ROSE: Reordered SparseGPT for More Accurate One-Shot Large Language Models Pruning">
-  <meta name="description" content="ROSE is a reordered one-shot pruning method that improves SparseGPT by adaptively reordering weight columns to minimize reconstruction error in large language models.">
+  <meta name="description"
+    content="ROSE is a reordered one-shot pruning method that improves SparseGPT by adaptively reordering weight columns to minimize reconstruction error in large language models.">
   <meta name="keywords" content="Large Language Models, Pruning, One-Shot, Training-Free, SparseGPT, Model Compression">
   <meta name="author" content="Mingluo Su, Huan Wang">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Westlake University">
-  <meta property="og:title" content="ROSE: Reordered SparseGPT for More Accurate One-Shot Large Language Models Pruning">
-  <meta property="og:description" content="ROSE is a reordered one-shot pruning method that improves SparseGPT by adaptively reordering weight columns to minimize reconstruction error in large language models.">
-  <meta property="og:url" content="https://sunshine-0903.github.io/ROSE/">
-  <meta property="og:image" content="https://sunshine-0903.github.io/ROSE/static/images/social_preview.png">
+  <meta property="og:title"
+    content="ROSE: Reordered SparseGPT for More Accurate One-Shot Large Language Models Pruning">
+  <meta property="og:description"
+    content="ROSE is a reordered one-shot pruning method that improves SparseGPT by adaptively reordering weight columns to minimize reconstruction error in large language models.">
+  <meta property="og:url" content="https://mingluo-su.github.io/ROSE/">
+  <meta property="og:image" content="https://mingluo-su.github.io/ROSE/static/images/social_preview.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="ROSE - Research Overview">
@@ -32,13 +36,16 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@westlakeuni">
   <meta name="twitter:creator" content="@huanwang_tech">
-  <meta name="twitter:title" content="ROSE: Reordered SparseGPT for More Accurate One-Shot Large Language Models Pruning">
-  <meta name="twitter:description" content="ROSE is a reordered one-shot pruning method that improves SparseGPT by adaptively reordering weight columns to minimize reconstruction error in large language models.">
-  <meta name="twitter:image" content="https://sunshine-0903.github.io/ROSE/static/images/social_preview.png">
+  <meta name="twitter:title"
+    content="ROSE: Reordered SparseGPT for More Accurate One-Shot Large Language Models Pruning">
+  <meta name="twitter:description"
+    content="ROSE is a reordered one-shot pruning method that improves SparseGPT by adaptively reordering weight columns to minimize reconstruction error in large language models.">
+  <meta name="twitter:image" content="https://mingluo-su.github.io/ROSE/static/images/social_preview.png">
   <meta name="twitter:image:alt" content="ROSE - Research Overview">
 
   <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="ROSE: Reordered SparseGPT for More Accurate One-Shot Large Language Models Pruning">
+  <meta name="citation_title"
+    content="ROSE: Reordered SparseGPT for More Accurate One-Shot Large Language Models Pruning">
   <meta name="citation_author" content="Su, Mingluo">
   <meta name="citation_author" content="Wang, Huan">
   <meta name="citation_publication_date" content="2025">
@@ -50,7 +57,7 @@
   <meta name="msapplication-TileColor" content="#2563eb">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
+
   <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,21 +66,24 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
   <title>ROSE: Reordered SparseGPT for More Accurate One-Shot Large Language Models Pruning</title>
-  
+
   <!-- Favicon and App Icons -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
+
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  
+
   <!-- Non-critical CSS - Load asynchronously -->
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+
   <!-- Fallback for browsers that don't support preload -->
   <noscript>
     <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
@@ -81,10 +91,10 @@
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   </noscript>
-  
+
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
+
   <!-- Defer non-critical JavaScript -->
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
@@ -92,7 +102,7 @@
   <script defer src="static/js/bulma-carousel.min.js"></script>
   <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
-  
+
   <!-- Structured Data for Academic Papers -->
   <script type="application/ld+json">
   {
@@ -123,15 +133,15 @@
       "@type": "Organization",
       "name": "arXiv"
     },
-    "url": "https://sunshine-0903.github.io/ROSE/",
-    "image": "https://sunshine-0903.github.io/ROSE/static/images/social_preview.png",
+    "url": "https://mingluo-su.github.io/ROSE/",
+    "image": "https://mingluo-su.github.io/ROSE/static/images/social_preview.png",
     "keywords": ["Large Language Models", "Pruning", "One-Shot", "SparseGPT", "Model Compression"],
-    "abstract": "Pruning is widely recognized as an effective method for reducing the parameters of large language models (LLMs), potentially leading to more efficient deployment and inference. One classic and prominent path of one-shot LLM pruning is to leverage second-order gradients (i.e., Hessian), represented by the pioneering work SparseGPT. However, the predefined left-to-right pruning order in SparseGPT leads to suboptimal performance when the weights exhibit columnar patterns. This paper studies the effect of pruning order under the SparseGPT framework. The analyses lead us to propose ROSE, a reordered SparseGPT method that prioritizes weight columns with larger potential pruning errors to be processed earlier. ROSE first performs pre-pruning to identify weights that are highly likely to be pruned, and estimates both column-wise and block-wise pruning loss. The relative range of block loss is used as a metric to identify columnar layers and perform adaptive reordering for them. For the reordering operation, columns within each block are reordered in descending order of column loss, while blocks are reordered in descending order of block loss. Substantial empirical results on prevalent LLMs (LLaMA2-7B/13B/70B, LLaMA3-8B, Mistral-7B) demonstrate that ROSE surpasses the original SparseGPT and other counterpart pruning methods.",
+    "abstract": "Pruning is widely recognized as an effective method for reducing the parameters of large language models (LLMs), potentially leading to more efficient deployment and inference. One classic and prominent path of LLM one-shot pruning is to leverage second-order gradients (i.e., Hessian), represented by the pioneering work SparseGPT. However, the predefined left-to-right pruning order in SparseGPT leads to suboptimal performance when the weights exhibit columnar patterns. This paper studies the effect of pruning order under the SparseGPT framework. The analyses lead us to propose ROSE, a reordered SparseGPT method that prioritizes weights with larger potential pruning errors to be pruned earlier. ROSE first performs pre-pruning to identify candidate weights for removal, and estimates both column and block pruning loss. Subsequently, two-level reordering is performed: columns within each block are reordered in descending order of column loss, while blocks are reordered based on block loss. We introduce the relative range of block loss as a metric to identify columnar layers, enabling adaptive reordering across the entire model. Substantial empirical results on prevalent LLMs (LLaMA2-7B/13B/70B, LLaMA3-8B, Mistral-7B) demonstrate that ROSE surpasses the original SparseGPT and other counterpart pruning methods..",
     "isAccessibleForFree": true,
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "mainEntity": {
       "@type": "WebPage",
-      "@id": "https://sunshine-0903.github.io/ROSE/"
+      "@id": "https://mingluo-su.github.io/ROSE/"
     },
     "about": [
       { "@type": "Thing", "name": "Model Compression" },
@@ -139,18 +149,18 @@
     ]
   }
   </script>
-  
+
   <!-- Website/Organization Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Westlake University",
-    "url": "https://sunshine-0903.github.io/ROSE/",
-    "logo": "https://sunshine-0903.github.io/ROSE/static/images/favicon.ico",
+    "url": "https://mingluo-su.github.io/ROSE/",
+    "logo": "https://mingluo-su.github.io/ROSE/static/images/favicon.ico",
     "sameAs": [
       "https://twitter.com/huanwang_tech",
-      "https://github.com/sunshine-0903"
+      "https://github.com/mingluo-su"
     ]
   }
   </script>
@@ -159,11 +169,13 @@
     .publication-authors {
       margin-bottom: 0.2rem;
     }
+
     .bibtex-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
+
     .copy-bibtex-btn {
       background: none;
       border: none;
@@ -173,6 +185,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <!-- Scroll to Top Button -->
@@ -189,28 +202,29 @@
               <h1 class="title is-1 publication-title" style="margin-bottom: 0.5rem;">
                 ROSE: Reordered SparseGPT for More Accurate One-Shot Large Language Models Pruning
               </h1>
-              
+
               <div class="is-size-3 has-text-weight-bold" style="color: #b31b1b; margin-bottom: 1.5rem;">
                 CPAL 2026
               </div>
-              
+
               <div class="is-size-5 publication-authors">
                 <span class="author-block">
-                  <a href="https://github.com/sunshine-0903" target="_blank">Mingluo Su</a><sup>1</sup>,
+                  <a href="https://github.com/mingluo-su" target="_blank">Mingluo Su</a><sup>1</sup>,
                 </span>
                 <span class="author-block">
                   <a href="https://huanwang.tech/" target="_blank">Huan Wang</a><sup>1*</sup>
                 </span>
               </div>
-  
+
               <div class="is-size-5 publication-authors">
                 <span class="author-block"><sup>1</sup>Westlake University</span>
               </div>
-  
+
               <div class="is-size-7" style="margin-top: 0.5rem; margin-bottom: 1.5rem;">
-                <span class="author-block"><sup>*</sup>Corresponding author: wanghuan [at] westlake [dot] edu [dot] cn</span> 
+                <span class="author-block"><sup>*</sup>Corresponding author: wanghuan [at] westlake [dot] edu [dot]
+                  cn</span>
               </div>
-  
+
               <div class="columns is-centered logo-stack mb-0 pb-0">
                 <div class="logo-row">
                   <div class="column is-narrow">
@@ -226,14 +240,14 @@
                 <div class="publication-links">
                   <span class="link-block">
                     <a href="https://arxiv.org/pdf/2510.06751" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
+                      class="external-link button is-normal is-rounded is-dark">
                       <span class="icon"><i class="fas fa-file-pdf"></i></span>
                       <span>Paper</span>
                     </a>
                   </span>
                   <span class="link-block">
-                    <a href="https://github.com/sunshine-0903/ROSE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
+                    <a href="https://github.com/mingluo-su/ROSE" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
                       <span class="icon"><i class="fab fa-github"></i></span>
                       <span>Code</span>
                     </a>
@@ -254,7 +268,9 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified is-size-6">
             <p>
-              Pruning is widely recognized as an effective method for reducing the parameters of large language models (LLMs), potentially leading to more efficient deployment and inference. One classic and prominent path of one-shot LLM pruning is to leverage second-order gradients (<i>i.e.</i>, Hessian), represented by the pioneering work SparseGPT. However, the predefined left-to-right pruning order in SparseGPT leads to suboptimal performance when the weights exhibit <i>columnar</i> patterns. This paper studies the effect of pruning order under the SparseGPT framework. The analyses lead us to propose ROSE, a reordered SparseGPT method that prioritizes weight columns with larger potential pruning errors to be processed earlier. ROSE first performs pre-pruning to identify weights that are highly likely to be pruned, and estimates both column-wise and block-wise pruning loss. The relative range of block loss is used as a metric to identify <i>columnar</i> layers and perform adaptive reordering for them. For the reordering operation, columns within each block are reordered in descending order of column loss, while blocks are reordered in descending order of block loss. Substantial empirical results on prevalent LLMs (LLaMA2-7B/13B/70B, LLaMA3-8B, Mistral-7B) demonstrate that ROSE surpasses the original SparseGPT and other counterpart pruning methods.
+              Pruning is widely recognized as an effective method for reducing the parameters of large language models (LLMs), potentially leading to more efficient deployment and inference. One classic and prominent path of one-shot LLM pruning is to leverage second-order gradients (<i>i.e.</i>, Hessian), represented by the pioneering work SparseGPT. However, the predefined left-to-right pruning order in SparseGPT leads to suboptimal performance when the weights exhibit <i>columnar</i> patterns. This paper studies the effect of pruning order under the SparseGPT framework. The analyses lead us to propose ROSE, a reordered SparseGPT method that prioritizes weight columns with larger potential pruning errors to be processed earlier. ROSE first performs pre-pruning to identify weights that are highly likely to be pruned, and estimates both column and block pruning loss. Subsequently, two-level reordering is performed: columns within each block are reordered in descending order of column loss, while blocks are reordered based on block loss. We introduce the relative range of block loss as a metric to identify columnar layers, enabling adaptive reordering across the entire model. Substantial empirical results on prevalent LLMs (LLaMA2-7B/13B/70B,
+              LLaMA3-8B, Mistral-7B) demonstrate that ROSE surpasses the original SparseGPT and other counterpart
+              pruning methods.
             </p>
           </div>
         </div>
@@ -262,7 +278,7 @@
     </div>
   </section>
 
-    <section class="section hero is-light">
+  <section class="section hero is-light">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
@@ -271,7 +287,11 @@
             <img src="static/images/motivation.png" alt="Motivation">
           </div>
           <h2 class="subtitle is-size-6" style="text-align: left;">
-            (a) Change in reconstruction error of the "self\_attn.o\_proj" layer in the first Transformer Block of LLaMA2-7B during SparseGPT pruning as the number of pruned blocks increases. The sharpest increase appears at a later stage. (b) Weight visualization shows a <i>columnar</i> pattern along the input channel, with one block containing the most concentrated high-magnitude weights. (c) Reconstruction error after reordering: pruning the high-error block earlier yields lower total error.
+            (a) Change in reconstruction error of the "self\_attn.o\_proj" layer in the first Transformer Block of
+            LLaMA2-7B during SparseGPT pruning as the number of pruned blocks increases. The sharpest increase appears
+            at a later stage. (b) Weight visualization shows a <i>columnar</i> pattern along the input channel, with one
+            block containing the most concentrated high-magnitude weights. (c) Reconstruction error after reordering:
+            pruning the high-error block earlier yields lower total error.
           </h2>
         </div>
       </div>
@@ -288,7 +308,10 @@
             <img src="static/images/overview.png" alt="Overview of the ROSE">
           </div>
           <h2 class="subtitle is-size-6" style="text-align: left;">
-            (a) Illustration of difference between SparseGPT and ROSE. In SparseGPT, as pruning progresses, fewer weights remain for compensation. If high-error weights are pruned late, compensation is limited. ROSE reorders columns so high-error ones are pruned early, preserving more parameters for compensation. (b) ROSE workflow for a <i>columnar</i> layer: given dense weight <b>W</b>, compute importance scores <b>S</b>, split into blocks, select smallest p% per block as loss matrix, compute column/block losses, then reorder columns (within block) and blocks in descending loss order.
+            (a) Overview of difference between SparseGPT and ROSE. In SparseGPT, as pruning progresses, fewer
+            weights remain for compensation. If high-error weights are pruned late, compensation is limited. ROSE
+            reorders columns to make high-error weights be pruned early, preserving more parameters for compensation. (b) Illustration of our ROSE for the <i>columnar</i> layer. Given the dense weight <b> W</b> and target sparsity rate <i>p</i>%, we calculate the importance score <b>S</b> and split it into blocks based on <b>B_S</b>.The smallest $p\%$ of values from each block are selected as the loss matrix <b>L</b>.  Column loss and block loss are calculated based on the loss matrix. Columns within one block are reordered in descending order of column loss, and blocks are reordered in descending order of block loss.
+.
           </h2>
         </div>
       </div>
@@ -296,39 +319,46 @@
   </section>
 
   <!-- Image carousel -->
-<section class="hero is-small" style="margin-bottom: 4rem;">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
+  <section class="hero is-small" style="margin-bottom: 4rem;">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
 
-      <h2 class="title is-3 has-text-centered" style="margin-bottom: 0rem;">Main Results</h2>
-      <div id="results-carousel" class="carousel results-carousel" style="margin-top: -3rem;">
-        <div class="item" style="min-height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-          <img src="static/images/error.png" alt="Relative reconstruction error" loading="lazy"/>
-          <h2 class="subtitle has-text-centered">
-            Relative reconstruction error of the "self\_attn.o\_proj" layer in the second Transformer Block of LLaMA2-7B by ROSE and its variants at varying sparsity rates.
-          </h2>
+        <h2 class="title is-3 has-text-centered" style="margin-bottom: 0rem;">Main Results</h2>
+        <div id="results-carousel" class="carousel results-carousel" style="margin-top: -3rem;">
+          <div class="item"
+            style="min-height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <img src="static/images/error.png" alt="Relative reconstruction error" loading="lazy" />
+            <h2 class="subtitle has-text-centered">
+              Relative reconstruction error of the "self\_attn.o\_proj" layer in the second Transformer Block of
+              LLaMA2-7B by ROSE and its variants at varying sparsity rates.
+            </h2>
+          </div>
+
+          <div class="item"
+            style="min-height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <img src="static/images/result-ppl.png" alt="Second research result visualization" loading="lazy" />
+            <h2 class="subtitle has-text-centered">
+              WikiText perplexity performance on LLaMA3-8B and Mistral-7B at varying sparsity rates. The best results
+              are highlighted in <b>bold</b> and the second-best results are indicated with <u>underline</u>.
+            </h2>
+          </div>
+
+          <div class="item">
+            <img src="static/images/result-model.png" alt="Third research result visualization"
+              style="max-width: 100%; height: auto;" loading="lazy" />
+            <h2 class="subtitle has-text-centered">
+              WikiText perplexity and zero-shot accuracy on LLaMA2 models at 70% sparsity for different unstructured
+              pruning methods. The best results are highlighted in <b>bold</b> and the second-best results are indicated
+              with <u>underline</u>.
+            </h2>
+          </div>
+
+
         </div>
-
-        <div class="item" style="min-height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-          <img src="static/images/result-ppl.png" alt="Second research result visualization"  loading="lazy"/>
-          <h2 class="subtitle has-text-centered">
-            WikiText perplexity performance on LLaMA3-8B and Mistral-7B at varying sparsity rates. The best results are highlighted in <b>bold</b> and the second-best results are indicated with <u>underline</u>.
-          </h2>
-        </div>
-
-        <div class="item">
-          <img src="static/images/result-model.png" alt="Third research result visualization" style="max-width: 100%; height: auto;" loading="lazy"/>
-          <h2 class="subtitle has-text-centered">
-            WikiText perplexity and zero-shot accuracy on LLaMA2 models at 70% sparsity for different unstructured pruning methods. The best results are highlighted in <b>bold</b> and the second-best results are indicated with <u>underline</u>.
-          </h2>
-        </div>
-
-
       </div>
     </div>
-  </div>
-</section>
-<!-- End image carousel -->
+  </section>
+  <!-- End image carousel -->
 
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
@@ -354,10 +384,13 @@
         <div class="column is-8">
           <div class="content has-text-centered">
             <a href="https://mapmyvisitors.com/web/1c2cf" title="Visit tracker">
-              <img src="https://mapmyvisitors.com/map.png?d=U9tGOHPEQveyV-2QSJF-0ugyIQ7eUGEN1Fm50LLksvs&cl=ffffff" alt="Visitor map" />
+              <img src="https://mapmyvisitors.com/map.png?d=U9tGOHPEQveyV-2QSJF-0ugyIQ7eUGEN1Fm50LLksvs&cl=ffffff"
+                alt="Visitor map" />
             </a>
             <p>
-              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>, adapted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a>, adapted from the <a href="https://nerfies.github.io"
+                target="_blank">Nerfies</a> project page.
             </p>
           </div>
         </div>
@@ -381,4 +414,5 @@
   </script>
 
 </body>
+
 </html>
