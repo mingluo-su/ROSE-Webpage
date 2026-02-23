@@ -310,7 +310,7 @@
           <h2 class="subtitle is-size-6" style="text-align: left;">
             (a) Overview of difference between SparseGPT and ROSE. In SparseGPT, as pruning progresses, fewer
             weights remain for compensation. If high-error weights are pruned late, compensation is limited. ROSE
-            reorders columns to make high-error weights be pruned early, preserving more parameters for compensation. (b) Illustration of our ROSE for the <i>columnar</i> layer. Given the dense weight <b> W</b> and target sparsity rate <i>p</i>%, we calculate the importance score <b>S</b> and split it into blocks based on <b>B_S</b>.The smallest $p\%$ of values from each block are selected as the loss matrix <b>L</b>.  Column loss and block loss are calculated based on the loss matrix. Columns within one block are reordered in descending order of column loss, and blocks are reordered in descending order of block loss.
+            reorders columns to make high-error weights be pruned early, preserving more parameters for compensation. (b) Illustration of our ROSE for the <i>columnar</i> layer. Given the dense weight <b> W</b> and target sparsity rate <i>p</i>%, we calculate the importance score <b>S</b> and split it into blocks based on blocksize.The smallest <i>p</i>% of values from each block are selected as the loss matrix <b>L</b>.  Column loss and block loss are calculated based on the loss matrix. Columns within one block are reordered in descending order of column loss, and blocks are reordered in descending order of block loss.
 .
           </h2>
         </div>
