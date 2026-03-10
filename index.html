@@ -209,7 +209,7 @@
 
               <div class="is-size-5 publication-authors">
                 <span class="author-block">
-                  <a href="https://github.com/mingluo-su" target="_blank">Mingluo Su</a><sup>1</sup>,
+                  <a href="https://mingluo-su.github.io" target="_blank">Mingluo Su</a><sup>1</sup>,
                 </span>
                 <span class="author-block">
                   <a href="https://huanwang.tech/" target="_blank">Huan Wang</a><sup>1*</sup>
@@ -239,7 +239,7 @@
               <div class="column has-text-centered">
                 <div class="publication-links">
                   <span class="link-block">
-                    <a href="https://arxiv.org/pdf/2510.06751" target="_blank"
+                    <a href="https://openreview.net/forum?id=x43pVuRwGM#discussion" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon"><i class="fas fa-file-pdf"></i></span>
                       <span>Paper</span>
@@ -308,7 +308,7 @@
             <img src="static/images/overview.png" alt="Overview of the ROSE">
           </div>
           <h2 class="subtitle is-size-6" style="text-align: left;">
-            (a) Overview of difference between SparseGPT and ROSE. In SparseGPT, as pruning progresses, fewer
+            (a) Overview of the difference between SparseGPT and ROSE. In SparseGPT, as pruning progresses, fewer
             weights remain for compensation. If high-error weights are pruned late, compensation is limited. ROSE
             reorders columns to make high-error weights be pruned early, preserving more parameters for compensation. (b) Illustration of our ROSE for the <i>columnar</i> layer. Given the dense weight <b> W</b> and target sparsity rate <i>p</i>%, we calculate the importance score <b>S</b> and split it into blocks based on blocksize.The smallest <i>p</i>% of values from each block are selected as the loss matrix <b>L</b>.  Column loss and block loss are calculated based on the loss matrix. Columns within one block are reordered in descending order of column loss, and blocks are reordered in descending order of block loss.
 .
@@ -369,11 +369,11 @@
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>@article{su2025rose,
+      <pre id="bibtex-code"><code>@inproceedings{su2025rose,
   title={ROSE: Reordered SparseGPT for More Accurate One-Shot Large Language Models Pruning},
   author={Su, Mingluo and Wang, Huan},
-  journal={arXiv preprint arXiv:2510.06751},
-  year={2025}
+  booktitle={CPAL},
+  year={2026}
 }</code></pre>
     </div>
   </section>
